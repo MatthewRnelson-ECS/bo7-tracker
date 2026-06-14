@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Checklist from "./components/Checklist";
-import RelicGrid from "./components/RelicGrid";
+import RelicGrid, { Relic } from "./components/RelicGrid"; // We imported the Relic rules here
 import { mapDatabase } from "./data/maps";
 
 export default function Home() {
@@ -18,7 +18,6 @@ export default function Home() {
       const keysToRemove = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        // Only target standard checklist trackers, leave Relics alone
         if (key && key.startsWith("bo7-tracker-")) {
           keysToRemove.push(key);
         }
@@ -108,8 +107,7 @@ export default function Home() {
         ) : activeQuest?.type === "relics" ? (
           <RelicGrid 
             mapId={activeMapId} 
-            relics={activeQuest.relics || []} 
-            // globalResetCounter is no longer passed here
+            relics={(activeQuest.relics as Relic[]) || []} // We cast it as Relic[] to satisfy TypeScript
           />
         ) : activeQuest ? (
           <Checklist 
