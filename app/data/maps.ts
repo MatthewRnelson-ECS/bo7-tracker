@@ -2,6 +2,7 @@ export const mapDatabase = [
   {
     id: "ashes-of-the-damned",
     name: "Ashes of the Damned",
+    backgroundImage: "/AOTD-Background.webp", 
     quests: [
       {
         id: "main-quest",
@@ -15,6 +16,7 @@ export const mapDatabase = [
   {
     id: "astra-malorum",
     name: "Astra Malorum",
+    backgroundImage: "/AM-Background.webp",
     quests: [
       {
         id: "main-quest",
@@ -28,6 +30,7 @@ export const mapDatabase = [
   {
     id: "paradox-junction",
     name: "Paradox Junction",
+    backgroundImage: "/PJ-Background.webp",
     quests: [
       {
         id: "main-quest",
@@ -41,6 +44,7 @@ export const mapDatabase = [
   {
     id: "totenreich",
     name: "Totenreich",
+    backgroundImage: "/TR-Background.webp",
     quests: [
       {
         id: "main-quest",
@@ -67,7 +71,8 @@ export const mapDatabase = [
     id: "kowakujo",
     name: "Kowakujo",
     isUpcoming: true,
-    previewImage: "/Kowakujo-Coming-Soon.jpg", 
+    previewImage: "/KK-Background.jpg", 
+    backgroundImage: "/KK-Background.jpg", 
     quests: []
   }
 ];
